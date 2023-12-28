@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import "../styles.css"
 
 function RegistrationForm() {
   const [name, setName] = useState('')
@@ -28,34 +29,44 @@ function RegistrationForm() {
 
   return (
     <div className="body-wrapper">
-      <h1>Register</h1>
-      <form onSubmit={registerUser}>
-        <input
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          placeholder="User name"
-          type="text" 
-          />
-        <br/>
-        <input
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Email"
-          type="email" 
-        />
-        <br/>
-        <input
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          placeholder="Password"
-          type="password" 
-        />
-        <br/>
-        <input
-          value="Register"
-          type="submit"
-        />
-      </form>
+      <div className="form-center">
+        <h2 className="form-title">New User</h2>
+        <form onSubmit={registerUser}>
+          <div className="form-field">
+            <label className="form-label">User name</label>
+            <input
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="User name"
+              type="text" 
+              />
+          </div>
+          <div className="form-field">
+            <label className="form-label">Email</label>
+            <input
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Email"
+              type="email" 
+            />
+          </div>
+          <div className="form-field">
+            <label className="form-label">Password</label>
+            <input
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Password"
+              type="password" 
+            />
+          </div>
+          <div className="form-field submit-field">
+            <input
+              value="Register"
+              type="submit"
+            />
+          </div>
+        </form>
+      </div>
     </div>    
   );
 }
