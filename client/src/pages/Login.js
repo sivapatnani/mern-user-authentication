@@ -7,7 +7,7 @@ function LoginForm() {
   const [password, setPassword] = useState('')
   const history = useNavigate()
 
-  const registerUser = async(event) => {
+  const onSubmit = async(event) => {
     event.preventDefault();
     const response = await fetch('http://localhost:1337/api/login', {
       method: "POST",
@@ -33,8 +33,8 @@ function LoginForm() {
   return (
     <div className="body-wrapper">
       <div className="form-center">
-        <h1>Login</h1>
-        <form onSubmit={registerUser}>
+        <h2 className="form-title">Login</h2>
+        <form onSubmit={onSubmit}>
           <div className="form-field">
             <label className="form-label">Email</label>
             <input
@@ -53,7 +53,7 @@ function LoginForm() {
               type="password" 
             />
           </div>
-          <div className="form-field">
+          <div className="form-field submit-field">
             <input
               value="Submit"
               type="submit"

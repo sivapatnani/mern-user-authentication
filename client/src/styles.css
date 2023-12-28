@@ -14,3 +14,18 @@
 .form-label {
     margin-right: 10px;
 }
+
+input {
+    padding-block: 6px;
+    margin-block: 6px;
+    padding-inline: 6px;
+}
+.form-title {
+    text-align: center;
+    background-color: #3d6070;
+    color: white;
+    padding: 5px;
+}
+.submit-field {
+    text-align: center
+}
