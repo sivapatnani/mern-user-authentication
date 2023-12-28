@@ -38,6 +38,7 @@ function LoginForm() {
           <div className="form-field">
             <label className="form-label">Email</label>
             <input
+              data-testid="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Email"
@@ -45,7 +46,7 @@ function LoginForm() {
             />
           </div>
           <div className="form-field">
-            <label className="form-label">Password</label>
+            <label data-testid="password" className="form-label">Password</label>
             <input
               value={password}
               onChange={(e) => setPassword(e.target.value)}
