@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import "../styles.css"
 
 function LoginForm() {
   const [email, setEmail] = useState('')
@@ -31,27 +32,35 @@ function LoginForm() {
 
   return (
     <div className="body-wrapper">
-      <h1>Login</h1>
-      <form onSubmit={registerUser}>
-        <input
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Email"
-          type="email" 
-        />
-        <br/>
-        <input
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          placeholder="Password"
-          type="password" 
-        />
-        <br/>
-        <input
-          value="Submit"
-          type="submit"
-        />
-      </form>
+      <div className="form-center">
+        <h1>Login</h1>
+        <form onSubmit={registerUser}>
+          <div className="form-field">
+            <label className="form-label">Email</label>
+            <input
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Email"
+              type="email" 
+            />
+          </div>
+          <div className="form-field">
+            <label className="form-label">Password</label>
+            <input
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Password"
+              type="password" 
+            />
+          </div>
+          <div className="form-field">
+            <input
+              value="Submit"
+              type="submit"
+            />
+          </div>
+        </form>
+      </div>
     </div>    
   );
 }

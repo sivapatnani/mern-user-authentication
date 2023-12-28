@@ -1,0 +1,16 @@
+.body-wrapper {
+    padding: 20px;
+}
+
+.form-center {
+    margin: 0 auto;
+    width: 200px;
+}
+
+.form-field {
+    margin-bottom: 15px;
+}
+
+.form-label {
+    margin-right: 10px;
+}
